@@ -49,3 +49,7 @@ function usd (theNumber) {
 console.log(
   statement(invoiceData, playsData)
 )
+
+console.log(
+  htmlStatement(invoiceData, playsData)
+)
