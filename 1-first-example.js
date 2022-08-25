@@ -39,7 +39,7 @@ function statement (invoice, plays) {
 
     // show line to this request
     result += `${play.name}: ${format(thisAmount/100)} (${perf.audience} seats)\n`
-    this.totalAmount = thisAmount
+    totalAmount += thisAmount
   }
 
   result += `Amount owed is ${format(totalAmount/100)}\n`
