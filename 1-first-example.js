@@ -1,3 +1,6 @@
+import { createRequire } from "module"; // Bring in the ability to create the 'require' method
+const require = createRequire(import.meta.url); // construct the require method
+
 const invoiceData = require('./invoice.json')
 const playsData = require('./plays.json')
 

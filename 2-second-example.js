@@ -1,6 +1,10 @@
-const createStatementData = require('./utils/createStatementData')
+import { createRequire } from "module"; // Bring in the ability to create the 'require' method
+const require = createRequire(import.meta.url); // construct the require method
+
 const invoiceData = require('./invoice.json')
 const playsData = require('./plays.json')
+
+import createStatementData from './utils/createStatementData.js'
 
 function statement(invoice, plays) {
   return renderPlainText(createStatementData(invoice, plays));
@@ -10,7 +14,7 @@ function renderPlainText (data) {
   let result = `Statement for ${data.customer}\n`
 
   for (let perf of data.performances) {
-    result += ` ${perf.play.name}: ${usd(data.totalAmount)} (${perf.audience} seats)\n`
+    result += ` ${perf.play.name}: ${usd(perf.amount)} (${perf.audience} seats)\n`
   }
 
   result += `Amount owed is ${usd(data.totalAmount)} \n`
@@ -50,6 +54,6 @@ console.log(
   statement(invoiceData, playsData)
 )
 
-console.log(
-  htmlStatement(invoiceData, playsData)
-)
+// console.log(
+//   htmlStatement(invoiceData, playsData)
+// )

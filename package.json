@@ -1,0 +1,21 @@
+{
+  "name": "refactoring",
+  "version": "1.0.0",
+  "main": "1-first-example.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guicazaroto/refactoring-examples-robert-martin.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guicazaroto/refactoring-examples-robert-martin/issues"
+  },
+  "homepage": "https://github.com/guicazaroto/refactoring-examples-robert-martin#readme",
+  "description": ""
+}
